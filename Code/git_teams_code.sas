@@ -1,0 +1,3 @@
+/* Program containing necessary code for making the API call to GitHub and then the call to the Teams Webhook.
+    Code includes API calls and the intermediate steps to get the information needed to generate the Teams card.
+    Please consult the README file in the Code folder for information on the macro variables used in the program. */
