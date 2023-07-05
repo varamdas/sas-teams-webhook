@@ -1,4 +1,4 @@
-# teams-webhook-test
+# sas-teams-webhook
 Repository containing assets for project involving Github API, SAS, and a Mircrosoft Teams webhook.
 Process involves SAS program that makes API call to GitHub (GET request using PROC  HTTP) and pulls out desired information for a timeframe of interest from the output of said API call. Then the program makes a POST call to a webhook configured in Microsoft Teams Team channel. The webhook posts a Teams card with information regarding activity for this repository.
 
