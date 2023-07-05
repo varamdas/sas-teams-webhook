@@ -13,13 +13,13 @@ More specific explanation of the program is included in the CODE folder that out
     !["Image of Team and Teams Channel"](./Images/Teams_Prereq_1.png)
 2. Right-click the channel and select "Connectors" from the menu.
     !["Image showing the Connectors menu option"](./Images/Teams_Prereq_2.png)
-3. Search for the "Incoming Webhook" connector and select "Configure".
+4. Search for the "Incoming Webhook" connector and select "Configure".
     !["Image of the Incoming Webhook connector and configure button"](./Images/Teams_Prereq_3.png)
-4. Provide a name for the webhook, an image (can also just use the default), and select "Create".
+5. Provide a name for the webhook, an image (can also just use the default), and select "Create".
     !["Image of webhook configuration and creation info"](./Images/Teams_Prereq_4.png)
-5. You should get a URL for your webhook, this will be used in the SAS program for the POST Call.
+6. You should get a URL for your webhook, this will be used in the SAS program for the POST Call.
     !["Image of URL for Teams webhook"](./Images/Teams_Prereq_5.png)
-6. Note that if you need to get this URL, you can go back to the connectors menu for the channel and select the "Configured" drop-down. You should see the webhook you just configured and now you can click "Manage" to see information about this webhook, including the URL.
+7. Note that if you need to get this URL, you can go back to the connectors menu for the channel and select the "Configured" drop-down. You should see the webhook you just configured and now you can click "Manage" to see information about this webhook, including the URL.
     !["Image of configured connectors"](./Images/Teams_Prereq_6a.png)
     !["Image of information for configured webhook, including URL"](./Images/Teams_Prereq_6b.png)
 
