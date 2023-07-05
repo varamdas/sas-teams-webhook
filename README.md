@@ -6,6 +6,8 @@ The information posted includes the list of contributors, the number of pushes, 
 
 More specific explanation of the program is included in the CODE folder that outlines how to use the program itself, the macro variables, and some ideas on how you could alter the program. Below is an outline of the steps you should do prior to working with the program along with additional resources that were helpful in putting this project together.
 
+This README, the code README, the program itself, and repository content will always be updated as things change in order to ensure this project works and the information provided about how to use it is accurate. If there are any issues with the code, please feel free to consult the resources included below or reach out to me directly.
+
 # Prerequisites
 
 ## Configuring Webhook for a Teams Channel
@@ -25,20 +27,26 @@ More specific explanation of the program is included in the CODE folder that out
 
 ## Generating a GitHub Token
 1. Go to GitHub, select your profile, and go to settings.  
-    !["Image of Team and Teams Channel"](./Images/Token_Prereq_1.png)
+    !["Image of user profile options"](./Images/Token_Prereq_1.png)
 2. Under the settings, go to "Developer Settings".  
-    !["Image of Team and Teams Channel"](./Images/Token_Prereq_2.png)
+    !["Image of selecting Developer Settings from user settings"](./Images/Token_Prereq_2.png)
 3. In Developer Settings, select the "Personal Access Tokens" dropdown.  
-    !["Image of Team and Teams Channel"](./Images/Token_Prereq_3.png)
+    !["Image of clicking the Personal Access Tokens dropdown"](./Images/Token_Prereq_3.png)
 4. From the options, select the token type. For this project the classic Tokens were used, but you are free to try the other token option.
 5. Select the "Generate new token" button and select the token option (once again, the classic approach was used for this project).  
-    !["Image of Team and Teams Channel"](./Images/Token_Prereq_4.png)
+    !["Image of selecting the option for generating a new token"](./Images/Token_Prereq_4.png)
 6. Provide a name for the token, an expiration window, and scopes (repo is all you need for this project). Then click "Generate Token".  
-    !["Image of Team and Teams Channel"](./Images/Token_Prereq_5.png)
+    !["Image of form for specifying characterisitics of the new token"](./Images/Token_Prereq_5.png)
 7. Copy the resulting token and put it somewhere safe for use with the SAS program, you will not be able to see the token again!  
-    !["Image of Team and Teams Channel"](./Images/Token_Prereq_6.png)
+    !["Image of what it looks like the receive the token after genearting it"](./Images/Token_Prereq_6.png)
+
+# Information Displayed
+
 
 # Resources
 - [SAS blog post about SAS and Teams webhooks](https://blogs.sas.com/content/sasdummy/2019/09/05/sas-microsoft-teams/)
 - [Microsoft article on creating webhooks in Teams](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook?tabs=dotnet)
 - [Teams Message Card Playground for developing cards](https://messagecardplayground.azurewebsites.net)
+- [GitHub API Documentation](https://docs.github.com/en/rest?apiVersion=2022-11-28)
+- [PROC HTTP Documetnation](https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/proc/n0t7v16eitluu2n15ffpfeafqszs.htm)
+- [SAS Communities](https://communities.sas.com)
