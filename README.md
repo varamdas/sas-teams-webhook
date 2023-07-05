@@ -9,33 +9,33 @@ More specific explanation of the program is included in the CODE folder that out
 # Prerequisites
 
 ## Configuring Webhook for a Teams Channel
-1. Go to the teams channel you want to have the webhook for (or create the Team and/or channel).
+1. Go to the teams channel you want to have the webhook for (or create the Team and/or channel).  
     !["Image of Team and Teams Channel"](./Images/Teams_Prereq_1.png)
-2. Right-click the channel and select "Connectors" from the menu.
+2. Right-click the channel and select "Connectors" from the menu.  
     !["Image showing the Connectors menu option"](./Images/Teams_Prereq_2.png)
-4. Search for the "Incoming Webhook" connector and select "Configure".
+4. Search for the "Incoming Webhook" connector and select "Configure".  
     !["Image of the Incoming Webhook connector and configure button"](./Images/Teams_Prereq_3.png)
-5. Provide a name for the webhook, an image (can also just use the default), and select "Create".
+5. Provide a name for the webhook, an image (can also just use the default), and select "Create".  
     !["Image of webhook configuration and creation info"](./Images/Teams_Prereq_4.png)
-6. You should get a URL for your webhook, this will be used in the SAS program for the POST Call.
+6. You should get a URL for your webhook, this will be used in the SAS program for the POST Call.  
     !["Image of URL for Teams webhook"](./Images/Teams_Prereq_5.png)
-7. Note that if you need to get this URL, you can go back to the connectors menu for the channel and select the "Configured" drop-down. You should see the webhook you just configured and now you can click "Manage" to see information about this webhook, including the URL.
-    !["Image of configured connectors"](./Images/Teams_Prereq_6a.png)
+7. Note that if you need to get this URL, you can go back to the connectors menu for the channel and select the "Configured" drop-down. You should see the webhook you just configured and now you can click "Manage" to see information about this webhook, including the URL.  
+    !["Image of configured connectors"](./Images/Teams_Prereq_6a.png)  
     !["Image of information for configured webhook, including URL"](./Images/Teams_Prereq_6b.png)
 
 ## Generating a GitHub Token
-1. Go to GitHub, select your profile, and go to settings.
+1. Go to GitHub, select your profile, and go to settings.  
     !["Image of Team and Teams Channel"](./Images/Token_Prereq_1.png)
-2. Under the settings, go to "Developer Settings".
+2. Under the settings, go to "Developer Settings".  
     !["Image of Team and Teams Channel"](./Images/Token_Prereq_2.png)
-3. In Developer Settings, select the "Personal Access Tokens" dropdown.
+3. In Developer Settings, select the "Personal Access Tokens" dropdown.  
     !["Image of Team and Teams Channel"](./Images/Token_Prereq_3.png)
 4. From the options, select the token type. For this project the classic Tokens were used, but you are free to try the other token option.
-5. Select the "Generate new token" button and select the token option (once again, the classic approach was used for this project).
+5. Select the "Generate new token" button and select the token option (once again, the classic approach was used for this project).  
     !["Image of Team and Teams Channel"](./Images/Token_Prereq_4.png)
-6. Provide a name for the token, an expiration window, and scopes (repo is all you need for this project). Then click "Generate Token".
+6. Provide a name for the token, an expiration window, and scopes (repo is all you need for this project). Then click "Generate Token".  
     !["Image of Team and Teams Channel"](./Images/Token_Prereq_5.png)
-7. Copy the resulting token and put it somewhere safe for use with the SAS program, you will not be able to see the token again!
+7. Copy the resulting token and put it somewhere safe for use with the SAS program, you will not be able to see the token again!  
     !["Image of Team and Teams Channel"](./Images/Token_Prereq_6.png)
 
 # Resources
