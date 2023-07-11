@@ -1,10 +1,10 @@
 # sas-teams-webhook
 Repository containing assets for project involving Github API, SAS, and a Mircrosoft Teams webhook.
-Process involves SAS program that makes API call to GitHub (GET request using PROC  HTTP) and pulls out desired information for a timeframe of interest from the output of said API call. Then the program makes a POST call to a webhook configured in Microsoft Teams Team channel. The webhook posts a Teams card with information regarding activity for this repository.
+Process involves SAS program that makes API call to GitHub (GET request using PROC  HTTP) and pulls out desired information for a timeframe of interest from the output of said API call. Then the program makes a POST call to a webhook configured in Microsoft Teams Team channel. The webhook posts a Teams card with information regarding activity for the repository.
 
 The information posted includes the list of contributors, the number of pushes, the number of issues raised, and the number of additional events that occurred. Moreover, a list of the commit messages and issue titles is included as well. Information included on this card may be adjusted over time, and anyone who downloads the assets for this project can make changes as they wish.
 
-More specific explanation of the program is included in the CODE folder that outlines how to use the program itself, the macro variables, and some ideas on how you could alter the program. Below is an outline of the steps you should do prior to working with the program along with additional resources that were helpful in putting this project together.
+More specific explanation of the program is included in the CODE folder that outlines how to use the program itself, the macro variables, implementing the program into a workflow, and some ideas on how one could alter the program for other uses. Below is an outline of the steps that one should do prior to working with the program along with additional resources that were helpful in putting this project together.
 
 This README, the code README, the program itself, and repository content will always be updated as things change in order to ensure this project works and the information provided about how to use it is accurate. If there are any issues with the code, please feel free to consult the resources included below or reach out to me directly.
 

@@ -56,7 +56,8 @@ data activity_table;
 	date = input(scan(created_at, 1, 'T'),YYMMDD10.);
 	wk = week(date, 'u');
 	yr = year(date);
-	format date YYMMDD10.;
+	run_date = today();
+	format date run_date YYMMDD10.;
 	if upcase(&weekly_wind) = 'Y' then do;
 		if wk = week(today()) & yr = year(today()) then output;
 	end;
@@ -78,6 +79,14 @@ data gitstats;
 	else miscCount + 1;
 	if last then output;
 run;
+
+/* Pulls out the date program was run and assigns it to a macro variable that will be passed
+	into the input JSON */
+proc sql noprint;
+	select distinct(run_date) into :runDate separated by ''
+	from activity_table;
+quit;
+%put &runDate;
 
 /* Takes the pushCount value from gitStats and assigns it to a macro variable that will be passed 
 	into the input JSON. */
@@ -207,7 +216,8 @@ quit;
 };
 /* Takes the json macro we created above and applies other functions to process the macro variables. Thus,
 	the resulting json stored in the "qjson" macro has all macro variables resolved and
-	is populated with the appropriate values. */
+	is populated with the appropriate values. */ce enablement
+	
 %let qjson = %tslit(%superq(json));
 
 /* POST call to a configured Microsoft Teams webhook. The provided input is the json referenced in the macro
