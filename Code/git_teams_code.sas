@@ -226,7 +226,7 @@ quit;
 filename msg temp;
 options noquotelenmax;
 proc http
-	url="https://sasoffice365.webhook.office.com/webhookb2/82e7c9e4-2973-4e89-a995-4252cf007120@b1c14d5c-3625-45b3-a430-9552373a0c2f/IncomingWebhook/ba47491c0a444397a8b5cae56f40e31f/f2c464fa-8936-43e3-9eeb-05c5d3d88956"
+	url="INSERT YOUR WEBHOOK URL"
 	method="POST"
   	in=&qjson
 	out=msg;
