@@ -49,4 +49,5 @@ This README, the code README, the program itself, and repository content will al
 - [Teams Message Card Playground for developing cards](https://messagecardplayground.azurewebsites.net)
 - [GitHub API Documentation](https://docs.github.com/en/rest?apiVersion=2022-11-28)
 - [PROC HTTP Documetnation](https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/proc/n0t7v16eitluu2n15ffpfeafqszs.htm)
+- [JSON Data in SAS](https://communities.sas.com/t5/Ask-the-Expert/How-to-use-JSON-data-in-SAS-Q-amp-A-and-on-demand-recording/ta-p/878508)
 - [SAS Communities](https://communities.sas.com)
