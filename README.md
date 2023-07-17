@@ -1,13 +1,13 @@
 # sas-teams-webhook
 # Table of Contents
-1. [About](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#about)
+1. [About](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#about)  
 2. [Prerequisites](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#prerequisites)   
     2a. [Configuring Webhook](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#configuring-webhook-for-a-teams-channel)    
     2b. [Generating GitHub Tokens](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#generating-a-github-token)  
-3. [Information Displayed](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#information-displayed)
-4. [Notes about Usage](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#notes-about-usage)
-5. [Resources](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#resources)
-6. [Contributors](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#contributors)
+3. [Information Displayed](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#information-displayed)  
+4. [Notes about Usage](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#notes-about-usage)  
+5. [Resources](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#resources)  
+6. [Contributors](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#contributors)  
 
 # About
 Repository containing assets for project involving Github API, SAS, and a Mircrosoft Teams webhook.
