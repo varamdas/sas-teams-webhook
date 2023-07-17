@@ -1,4 +1,15 @@
 # sas-teams-webhook
+# Table of Contents
+1. [About]
+2. [Prerequisites]
+    2a. [Configuring Webhook]
+    2b. [Generating GitHub Tokens]
+3. [Information Displayed]
+4. [Notes about Usage]
+5. [Resources]
+6. [Contributors]
+
+# About
 Repository containing assets for project involving Github API, SAS, and a Mircrosoft Teams webhook.
 Process involves SAS program that makes API call to GitHub (GET request using PROC  HTTP) and pulls out desired information for a timeframe of interest from the output of said API call. Then the program makes a POST call to a webhook configured in Microsoft Teams Team channel. The webhook posts a Teams card with information regarding activity for the repository.
 
@@ -9,6 +20,7 @@ More specific explanation of the program is included in the CODE folder that out
 This README, the code README, the program itself, and repository content will always be updated as things change in order to ensure this project works and the information provided about how to use it is accurate. If there are any issues with the code, please feel free to consult the resources included below or reach out to me directly.
 
 # Prerequisites
+Please ensure you do the below steps before moving on to reading about and using the provided code. Use of the program requires users to have either SAS Viya (3.5 or 4) or SAS 9.4.
 
 ## Configuring Webhook for a Teams Channel
 1. Go to the teams channel you want to have the webhook for (or create the Team and/or channel).  
@@ -41,7 +53,11 @@ This README, the code README, the program itself, and repository content will al
     !["Image of what it looks like the receive the token after genearting it"](./Images/Token_Prereq_6.png)
 
 # Information Displayed
+Information displayed in Teams using the program in this repostiroy includes: Contributors to the repository, Number of pushes, Number of issues raise, Number of other events, List of commit messages, and a List of Issue topics. Clickable buttons linking to the repository, issues, and commits pages are included as well.  
+!["Image of Teams Card"](./Images/Teams_Card.png)
 
+# Notes about Usage
+For use, feel free to take the code provided in this repository and use it and make changes as you wish. It is recommended you refer to a repository you work with consistently to get the most value out of this code. Make sure the repository you use this code with is one you have access to and that you have the ability to create Teams channels and configure them. You might need to consult with GitHub repo owners and IT if there are any access issues.
 
 # Resources
 - [SAS blog post about SAS and Teams webhooks](https://blogs.sas.com/content/sasdummy/2019/09/05/sas-microsoft-teams/)
@@ -51,3 +67,6 @@ This README, the code README, the program itself, and repository content will al
 - [PROC HTTP Documetnation](https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/proc/n0t7v16eitluu2n15ffpfeafqszs.htm)
 - [JSON Data in SAS](https://communities.sas.com/t5/Ask-the-Expert/How-to-use-JSON-data-in-SAS-Q-amp-A-and-on-demand-recording/ta-p/878508)
 - [SAS Communities](https://communities.sas.com)
+
+# Contributors
+Vasanth Ramdas  
