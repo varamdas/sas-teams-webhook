@@ -31,9 +31,9 @@ For more information on where these variables and URLs are used, refer to the im
 - Macro variable for time window.
     !["Image of time window macro variable and code using it"](./Images_Code/Time_Macro.png) 
 - URLs that should be updated in JSON.
-    !["Image of repository-specific URLs"](./Code/Images_Code/JSON_URLs.png)
+    !["Image of repository-specific URLs"](./Images_Code/JSON_URLs.png)
 - URL for webhook accepting POST request.
-    !["Image of where to specify Teams webhook URL"](./Code/Images_Code/Webhook_URL.png)  
+    !["Image of where to specify Teams webhook URL"](./Images_Code/Webhook_URL.png)  
 
 Once those macros are specified and the webhook URL is included, the program should be ready to run. The other macro variables are created as part of the program and will have values based on the repository and time frame specified. There is a lot of room for flexibility with this program to adapt it as well. 
 
