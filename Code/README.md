@@ -26,13 +26,13 @@ Another thing users should look over is the URLs included in the JSON for the re
 The final thing users must provide is the URL for the webhook and make sure they paste that URL into the second PROC HTTP step at the end of the program. Note that the process for getting that webhook URL is outlined in the prequisite steps in the main README file.
 
 For more information on where these variables and URLs are used, refer to the images below.  
-- Macro variables for user, repo, and token.  
-    !["Image of API call to GitHub with user-specific macros"](./Images_Code/Call_Macros.png)  
-- Macro variable for time window.
-    !["Image of time window macro variable and code using it"](./Images_Code/Time_Macro.png) 
-- URLs that should be updated in JSON.
-    !["Image of repository-specific URLs"](./Images_Code/JSON_URLs.png)
-- URL for webhook accepting POST request.
+- Macro variables for user, repo, and token.    
+    !["Image of API call to GitHub with user-specific macros"](./Images_Code/Call_Macros.png)    
+- Macro variable for time window.  
+    !["Image of time window macro variable and code using it"](./Images_Code/Time_Macro.png)  
+- URLs that should be updated in JSON.  
+    !["Image of repository-specific URLs"](./Images_Code/JSON_URLs.png)  
+- URL for webhook accepting POST request.  
     !["Image of where to specify Teams webhook URL"](./Images_Code/Webhook_URL.png)  
 
 Once those macros are specified and the webhook URL is included, the program should be ready to run. The other macro variables are created as part of the program and will have values based on the repository and time frame specified. There is a lot of room for flexibility with this program to adapt it as well. 
