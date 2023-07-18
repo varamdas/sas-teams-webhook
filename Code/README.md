@@ -1,6 +1,14 @@
 # sas-teams-webhook: Code
 This folder contains the code used to make the API call to GitHub for this project as well as the POST call to the webhook. This specific ReadMe will include the most up-to-date information on the program, how it works and how to use it, and the macro variables used in the program.
 
+# Table of Contents
+1. [Macro Variables](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#macro-variables)  
+2. [Usage](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#usage)    
+    2a. [Setting up Macros, JSON, and Webhook URL](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#setting-up-macros-json-and-webhook-url)    
+    2b. [Potential Changes, Notes, and Use in Workflow](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#potential-changes-notes-and-use-in-workflow)   
+3. [Future Improvements](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#future-improvements)    
+4. [Resources](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#resources)  
+
 # Macro Variables
 - user: The username of the repository owner. In this case it is "varamd" for this repository.
 - repo: The name of the repository whose information is being accssed. In this case it is "sas-teams-webhook".
