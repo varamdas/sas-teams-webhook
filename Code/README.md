@@ -53,7 +53,7 @@ Users may also want to include other information in the Teams card and can exami
 Finally, after getting the program to run users might be interested in how to use this program in a workflow. At a high level, the program is making a call to GitHub's API to grab some information, is processing that information, and then sending that information to a Teams webhook that takes that information and creates a Teams card. This SAS program could be scheduled as a SAS job and run at some consistent interval (daily, weekly, etc.) to automate these updates. For example, taking the program on this repository and scheudling it to run every Friday afternoon in order to send a weekly activity report to a Teams channel. If there is a need for more automatic or real-time updates for a busy repository, the SAS job with this program could run more regularly (every couple of minutes or so) and code could be added to check for any new additions to the repository. If additional pushes, issues, or other events occured, then a card could be sent out to users. Keep in mind the resources being utilized to run that job so often and consider how quickly information updates on GitHub's end when new events occur.
 
 # Future Improvements
-- Plans to handle case where there are no events of a given type during a given time window, and returning blank values or a value that indicates no new issues of these types have occurred.
+- Leverage GitHub API to include additional information in payload to Teams Webhook and, as a result, the card sent in Teams.
 
 # Resources
 - [Resources section on main ReadMe](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#resources) 

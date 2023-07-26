@@ -56,8 +56,7 @@ data activity_table;
 	date = input(scan(created_at, 1, 'T'),YYMMDD10.);
 	wk = week(date, 'u');
 	yr = year(date);
-	run_date = today();
-	format date run_date YYMMDD10.;
+	format date YYMMDD10.;
 	if upcase(&weekly_wind) = 'Y' then do;
 		if wk = week(today()) & yr = year(today()) then output;
 	end;
@@ -80,13 +79,14 @@ data gitstats;
 	if last then output;
 run;
 
-/* Pulls out the date program was run and assigns it to a macro variable that will be passed
-	into the input JSON */
-proc sql noprint;
-	select distinct(run_date) into :runDate separated by ''
-	from activity_table;
-quit;
-%put &runDate;
+/* Create output macros and set initial values to the date, 0s, or NA. */
+%let runDate=%sysfunc(today(),YYMMDD10.);
+%let contributors=NA;
+%let push=0;
+%let issue=0;
+%let misc=0;
+%let commitMessage=NA;
+%let issueTitle=NA;
 
 /* Takes the pushCount value from gitStats and assigns it to a macro variable that will be passed 
 	into the input JSON. */
