@@ -231,7 +231,7 @@ quit;
 };
 /* Takes the json macro we created above and applies other functions to process the macro variables. Thus,
 	the resulting json stored in the "qjson" macro has all macro variables resolved and
-	is populated with the appropriate values. */ce enablement
+	is populated with the appropriate values. */
 	
 %let qjson = %tslit(%superq(json));
 
