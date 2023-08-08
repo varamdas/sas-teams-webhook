@@ -66,6 +66,13 @@ run;
 /* Deletes dataset that is not needed going forward. */
 proc delete data=date_commit;
 
+/* Creates a small dataset that houses value indicating the window being applied. */
+data window_value;
+	if upcase(&weekly_wind) = 'Y' then
+		window_ind = "WEEK";
+	else window_ind = "LIFETIME";
+run;
+
 /* Creates dataset containing metrics for number of events grouped by type. If an event does not
 	fall into a push or issue category, it is in the misc category. */
 data gitstats;
@@ -87,6 +94,14 @@ run;
 %let misc=0;
 %let commitMessage=NA;
 %let issueTitle=NA;
+
+/* Takes the window value from the window_value dataset and assigns it to a macro variable that will be passed 
+	into the input JSON. */
+proc sql noprint;
+	select window_ind into :window separated by ''
+	from window_value;
+quit;
+%Put &window;
 
 /* Takes the pushCount value from gitStats and assigns it to a macro variable that will be passed 
 	into the input JSON. */
@@ -178,7 +193,7 @@ quit;
                     "value": "%bquote(&issueTitle)"
                 }
 			],
-			"text": "Summary of activity for the past week for %bquote(&repo) repository."
+			"text": "Summary of activity for the %bquote(&repo) repository for the following timeframe: <b>%bquote(&window)</b>"
 		}
 	],
 	"potentialAction": [

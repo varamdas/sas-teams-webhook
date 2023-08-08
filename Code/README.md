@@ -6,8 +6,9 @@ This folder contains the code used to make the API call to GitHub for this proje
 2. [Usage](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#usage)    
     2a. [Setting up Macros, JSON, and Webhook URL](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#setting-up-macros-json-and-webhook-url)    
     2b. [Potential Changes, Notes, and Use in Workflow](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#potential-changes-notes-and-use-in-workflow)   
-3. [Future Improvements](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#future-improvements)    
-4. [Resources](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#resources)  
+3. [Future Improvements](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#future-improvements)
+4. [Changelog](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#changelog)    
+5. [Resources](https://github.com/varamdas/sas-teams-webhook/tree/main/Code#resources)  
 
 # Macro Variables
 - user: The username of the repository owner. In this case it is "varamd" for this repository.
@@ -21,6 +22,7 @@ This folder contains the code used to make the API call to GitHub for this proje
 - contributors: Holds the list of contributors to the repository during the current week or the past 90 days.
 - commitMessage: Holds a list of commit messages associated with any commits that have happened during the current week or the past 90 days.
 - issueTitle: Holds a list of commit messages associated with any commits that have happened during the current week or the past 90 days.
+- window: Holds the value representing the time window being looked at for the repository.
 - json: Holds the initial json that is sent as part of the POST request in order to create the Teams card. All macro variables are surrounded by %bquote().
 - qjson: Takes the json stored in the macro above and uses two other marco functions in %superq and %tslit to ensure proper resolution of macro variables in the json being submitted in the PROC HTTP request.
 
@@ -46,7 +48,7 @@ For more information on where these variables and URLs are used, refer to the im
 Once those macros are specified and the webhook URL is included, the program should be ready to run. The other macro variables are created as part of the program and will have values based on the repository and time frame specified. There is a lot of room for flexibility with this program to adapt it as well. 
 
 ## Potential Changes, Notes, and Use in Workflow
-Some potential changes may involved changing the the types of time windows you are interested in and creating one for daily or maybe monthly acitivty. The filtering for the time window occurs in the data step where the activity table is created, so users could create a new time-related macro and make changes to the code here to update the time filter being applied. Note that if specifiying a time window that is not a week, you will have to make some changes to the variables that are created and used in the conditional logic in this code block. Also keep in mind that the GitHub API will only keep up to 90 days of information, so any window longer than that will not return any additional information. 
+Some potential changes may involved changing the the types of time windows you are interested in and creating one for daily or maybe monthly acitivty. The filtering for the time window occurs in the data step where the activity table is created, so users could create a new time-related macro and make changes to the code here to update the time filter being applied. Note that if specifiying a time window that is not a week, you will have to make some changes to the variables that are created and used in the conditional logic in this code block. Moreover, the window macro variable would need to be tweaked as well. Users can find the data step that houses the time window value and make changes to the conditional logic being used to consider different or additional time windows. Finally, keep in mind that the GitHub API will only keep up to 90 days of information, so any window longer than that will not return any additional information. 
 
 Users may also want to include other information in the Teams card and can examine the data returned by the API call to GitHub to find other useful data. Moreover, GitHub has API documentation covering other APIs one can call out to. Thus, one could adapt this program to hit other GithUb APIs. Additionally, users may want to format the Teams card differently and can leverage Microsoft's card-building sandbox to see what the card would look like as they make changes. Links to the GitHub API documentation and cards playground are included in the main README.
 
@@ -54,6 +56,10 @@ Finally, after getting the program to run users might be interested in how to us
 
 # Future Improvements
 - Leverage GitHub API to include additional information in payload to Teams Webhook and, as a result, the card sent in Teams.
+
+# Changelog
+- Changed macro value assignments to address cases where no new activity has occurred in the specified time window. (7/26/23)  
+- Added code to create new dataset that supplies value for a new macro that represents the time window being applied. This value is then included as part of the Teams card output. (8/8/23)  
 
 # Resources
 - [Resources section on main ReadMe](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#resources) 
