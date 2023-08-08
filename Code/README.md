@@ -58,8 +58,8 @@ Finally, after getting the program to run users might be interested in how to us
 - Leverage GitHub API to include additional information in payload to Teams Webhook and, as a result, the card sent in Teams.
 
 # Changelog
-- Changed macro value assignments to address cases where no new activity has occurred in the specified time window. (7/26/23)  
-- Added code to create new dataset that supplies value for a new macro that represents the time window being applied. This value is then included as part of the Teams card output. (8/8/23)  
+- <b>(7/26/23)</b>: Changed macro value assignments to address cases where no new activity has occurred in the specified time window.  
+- <b>(8/8/23)</b>: Added code to create new dataset that supplies value for a new macro that represents the time window being applied. This value is then included as part of the Teams card output.   
 
 # Resources
 - [Resources section on main ReadMe](https://github.com/varamdas/sas-teams-webhook/blob/main/README.md#resources) 
