@@ -66,7 +66,7 @@ run;
 /* Deletes dataset that is not needed going forward. */
 proc delete data=date_commit;
 
-/* Creates a small dataset that houses value indicating the window being applied. */
+/* Creates a small dataset that houses value indicating the time window being applied. */
 data window_value;
 	if upcase(&weekly_wind) = 'Y' then
 		window_ind = "WEEK";
